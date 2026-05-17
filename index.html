@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valerie Jaksic Design &middot; Search-Visibility Audit</title>
+<meta name="description" content="A search-visibility audit for Valerie Jaksic Design: 24 years of Northeast Wisconsin interior design, Best of Houzz three years running, 2025 Quality Business Award for Best Interior Designer in Green Bay, and what AI engines currently say about it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #f7f3ec;
+    --warm-white: #fbf8f2;
+    --sand: #e8dfce;
+    --taupe: #b8a890;
+    --warm-stone: #8a7960;
+    --charcoal: #2f2a24;
+    --ink: #1d1a16;
+    --sage: #7a8b6f;
+    --sage-deep: #556149;
+    --sage-light: #d4ddc9;
+    --clay: #b87a55;
+    --line: #d8cfbc;
+    --shadow: 0 1px 2px rgba(45, 38, 28, 0.04), 0 8px 24px rgba(45, 38, 28, 0.06);
+    --radius: 6px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    margin: 0;
+    background: var(--warm-white);
+    color: var(--ink);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  a { color: var(--sage-deep); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.site {
+    background: var(--ivory);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+  }
+  .brand {
+    font-weight: 600;
+    font-size: 1.02rem;
+    letter-spacing: 0.02em;
+    color: var(--charcoal);
+  }
+  .brand span { color: var(--sage-deep); font-weight: 500; }
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav ul a {
+    color: var(--warm-stone);
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .nav ul a:hover { color: var(--sage-deep); text-decoration: none; }
+
+  .hero {
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--warm-white) 100%);
+    padding: 96px 0 80px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding: 6px 14px;
+    background: var(--sage-light);
+    border-radius: 100px;
+  }
+  h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+    color: var(--charcoal);
+    max-width: 880px;
+  }
+  h1 em {
+    font-style: normal;
+    color: var(--sage-deep);
+    font-weight: 700;
+  }
+  .hero-lede {
+    font-size: 1.18rem;
+    color: var(--warm-stone);
+    max-width: 760px;
+    margin: 0 0 48px;
+    line-height: 1.6;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .stat {
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+  }
+  .stat-num {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--sage-deep);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .stat-label {
+    font-size: 0.88rem;
+    color: var(--warm-stone);
+    line-height: 1.5;
+  }
+
+  .trust-band {
+    background: var(--charcoal);
+    color: var(--ivory);
+    padding: 22px 0;
+    font-size: 0.86rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  .trust-band span { color: var(--sand); }
+
+  section {
+    padding: 88px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin: 0 0 16px;
+    color: var(--charcoal);
+    line-height: 1.2;
+  }
+  .section-lede {
+    font-size: 1.08rem;
+    color: var(--warm-stone);
+    max-width: 720px;
+    margin: 0 0 48px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .portrait {
+    background: linear-gradient(135deg, var(--sage-light) 0%, var(--sand) 100%);
+    border-radius: var(--radius);
+    aspect-ratio: 4/5;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .portrait::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(135deg, transparent 0 18px, rgba(85, 97, 73, 0.04) 18px 19px);
+  }
+  .portrait-caption {
+    position: relative;
+    background: rgba(45, 38, 28, 0.78);
+    color: var(--ivory);
+    padding: 14px 18px;
+    border-radius: 4px;
+    font-size: 0.84rem;
+    line-height: 1.5;
+    backdrop-filter: blur(4px);
+  }
+  .portrait-caption strong { display: block; font-weight: 600; margin-bottom: 2px; }
+
+  .about-copy p {
+    font-size: 1.04rem;
+    color: var(--ink);
+    margin: 0 0 18px;
+    line-height: 1.72;
+  }
+  .about-copy p strong { color: var(--charcoal); font-weight: 600; }
+  .career-list {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    border-top: 1px solid var(--line);
+  }
+  .career-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.96rem;
+  }
+  .career-list .role { color: var(--charcoal); font-weight: 500; }
+  .career-list .span { color: var(--warm-stone); font-size: 0.88rem; }
+
+  .awards {
+    background: var(--ivory);
+  }
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .award {
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+  }
+  .award:hover { transform: translateY(-2px); }
+  .award-medal {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--clay) 0%, var(--warm-stone) 100%);
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ivory);
+    font-weight: 700;
+    font-size: 0.98rem;
+    letter-spacing: 0.04em;
+    box-shadow: inset 0 -3px 8px rgba(0,0,0,0.18);
+  }
+  .award-title {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .award-source {
+    font-size: 0.8rem;
+    color: var(--warm-stone);
+    letter-spacing: 0.02em;
+  }
+
+  .audit-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-size: 0.94rem;
+    box-shadow: var(--shadow);
+  }
+  .audit-table th {
+    background: var(--charcoal);
+    color: var(--ivory);
+    text-align: left;
+    padding: 16px 18px;
+    font-weight: 600;
+    font-size: 0.86rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .audit-table td {
+    padding: 16px 18px;
+    border-top: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .audit-table tr:nth-child(even) td { background: var(--ivory); }
+  .query { font-weight: 500; color: var(--charcoal); }
+  .verdict {
+    font-weight: 600;
+    color: var(--clay);
+    white-space: nowrap;
+  }
+  .verdict.partial { color: var(--warm-stone); }
+  .note { color: var(--warm-stone); font-size: 0.88rem; }
+  .audit-summary {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--sage-light);
+    border-left: 4px solid var(--sage-deep);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--charcoal);
+    line-height: 1.65;
+  }
+  .audit-summary strong { color: var(--sage-deep); }
+
+  .build {
+    background: var(--ivory);
+  }
+  .build-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .build-card {
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .build-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.06rem;
+    color: var(--charcoal);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .build-card h3::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--sage);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .build-card p {
+    margin: 0;
+    color: var(--warm-stone);
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+  .build-card code {
+    background: var(--sand);
+    color: var(--charcoal);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 0.86rem;
+    font-family: 'SF Mono', Consolas, monospace;
+  }
+
+  .why-now {
+    background: var(--warm-white);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .why-card {
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--sage);
+    border-radius: var(--radius);
+    padding: 26px;
+  }
+  .why-num {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    color: var(--sage-deep);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .why-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.04rem;
+    color: var(--charcoal);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .why-card p {
+    margin: 0;
+    color: var(--warm-stone);
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .faq {
+    background: var(--ivory);
+  }
+  details {
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    transition: border-color 0.2s ease;
+  }
+  details[open] { border-color: var(--sage); }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    color: var(--sage-deep);
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p {
+    margin: 16px 0 0;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  footer.site {
+    background: var(--charcoal);
+    color: var(--sand);
+    padding: 56px 0 36px;
+    font-size: 0.92rem;
+  }
+  footer .container { display: flex; flex-direction: column; gap: 28px; }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-brand strong {
+    color: var(--ivory);
+    font-size: 1.05rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .footer-brand span { color: var(--taupe); font-size: 0.88rem; }
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .footer-links a { color: var(--sand); font-weight: 500; }
+  .footer-links a:hover { color: var(--ivory); }
+  .signoff {
+    border-top: 1px solid rgba(232, 223, 206, 0.18);
+    padding-top: 24px;
+    color: var(--taupe);
+    font-size: 0.86rem;
+    line-height: 1.7;
+  }
+  .signoff a { color: var(--sage-light); font-weight: 500; }
+
+  @media (max-width: 880px) {
+    .nav ul { display: none; }
+    .stats { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .awards-grid { grid-template-columns: repeat(2, 1fr); }
+    .build-grid, .why-grid { grid-template-columns: 1fr; }
+    .audit-table { font-size: 0.86rem; }
+    .audit-table th, .audit-table td { padding: 12px 10px; }
+    section { padding: 60px 0; }
+    .hero { padding: 64px 0 56px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <div class="brand">Valerie Jaksic Design <span>&middot; Search-Visibility Audit</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Awards</a></li>
+      <li><a href="#audit">Audit</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Independent Audit &middot; Northeast Wisconsin</span>
+    <h1>24 years. Best of Houzz three times. Quality Business Award 2025 for Best Interior Designer in Green Bay. <em>Zero of five AI engines say so.</em></h1>
+    <p class="hero-lede">When a homeowner in De Pere asks ChatGPT, Perplexity, Claude, Gemini, or Google AI Overviews for the best interior designer in Northeast Wisconsin, Valerie Jaksic Design does not appear in the answer. This audit shows where the search-visibility gap sits and what would close it.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">24</div>
+        <div class="stat-label">years designing residential interiors across Northeast Wisconsin and Door County, since 2001</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">industry awards on the wall: Best of Houzz 2019, 2020, 2021 plus the 2025 Quality Business Award</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0&ndash;1<span style="font-size:1rem;color:var(--warm-stone);font-weight:500;"> / 5</span></div>
+        <div class="stat-label">AI engines that name Valerie Jaksic Design when asked for Green Bay interior designers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-band">
+  <div class="container">
+    Valerie Jaksic O'Leary <span>&middot;</span> Interior Design degree, 2000 <span>&middot;</span> Best of Houzz 2019 / 2020 / 2021 <span>&middot;</span> Quality Business Award 2025 <span>&middot;</span> Studio in Suamico, serving Green Bay, De Pere, Door County
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <h2>About Valerie</h2>
+    <p class="section-lede">Solo interior designer with industry-depth most designers do not have. Before launching the studio in 2001, Valerie spent her early career inside the supply side of the trade, learning plumbing, flooring, and textiles from the people who manufacture and distribute them.</p>
+
+    <div class="about-grid">
+      <div class="portrait" role="img" aria-label="Portrait placeholder for Valerie Jaksic O'Leary, founder of Valerie Jaksic Design">
+        <div class="portrait-caption">
+          <strong>Valerie Jaksic O'Leary</strong>
+          Founder &middot; Valerie Jaksic Design LLC<br>
+          Suamico, Wisconsin
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <p><strong>One designer. Twenty-four years. Northeast Wisconsin.</strong> Valerie Jaksic Design LLC has operated as a solo woman-owned studio since 2001, with one principal making every selection, sourcing every material, and walking every site personally.</p>
+
+        <p>The career arc behind the studio is what makes the work different. Before founding the practice, Valerie worked inside three of the industries her clients now ask her about. <strong>First Supply</strong> taught her how plumbing fixtures are specified and where the failure points sit. <strong>H.J. Martin and Son</strong> taught her commercial and residential flooring at scale. <strong>Mohawk Industries</strong> taught her the textile and carpet supply chain from the manufacturer's side of the table.</p>
+
+        <p>The result is a designer who reads spec sheets the way other designers read mood boards. When a client asks whether a quartz looks the same as the showroom sample under their north-facing kitchen window, Valerie has already specified the same slab on a project two miles away and knows the answer.</p>
+
+        <ul class="career-list">
+          <li><span class="role">Valerie Jaksic Design LLC &middot; Founder</span><span class="span">2001 &ndash; Present</span></li>
+          <li><span class="role">Mohawk Industries &middot; Textiles &amp; Carpet</span><span class="span">Prior career</span></li>
+          <li><span class="role">H.J. Martin and Son &middot; Flooring</span><span class="span">Prior career</span></li>
+          <li><span class="role">First Supply &middot; Plumbing &amp; Fixtures</span><span class="span">Prior career</span></li>
+          <li><span class="role">Interior Design Degree</span><span class="span">2000</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="awards">
+  <div class="container">
+    <h2>The wall of awards no AI engine has read</h2>
+    <p class="section-lede">Four independent recognitions, three of them stacked back-to-back-to-back on Houzz. Every one is verifiable on the issuing platform. None of them currently surface in conversational AI answers about Northeast Wisconsin interior designers.</p>
+
+    <div class="awards-grid">
+      <div class="award">
+        <div class="award-medal">2019</div>
+        <div class="award-title">Best of Houzz</div>
+        <div class="award-source">Houzz &middot; Service</div>
+      </div>
+      <div class="award">
+        <div class="award-medal">2020</div>
+        <div class="award-title">Best of Houzz</div>
+        <div class="award-source">Houzz &middot; Service</div>
+      </div>
+      <div class="award">
+        <div class="award-medal">2021</div>
+        <div class="award-title">Best of Houzz</div>
+        <div class="award-source">Houzz &middot; Service</div>
+      </div>
+      <div class="award">
+        <div class="award-medal">2025</div>
+        <div class="award-title">Best Interior Designer Green Bay</div>
+        <div class="award-source">Quality Business Awards</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audit">
+  <div class="container">
+    <h2>The audit: what five AI engines say about Green Bay interior design</h2>
+    <p class="section-lede">Five queries a real homeowner in Northeast Wisconsin would type into ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews. The same five queries a designer with three Best of Houzz awards and a 2025 Quality Business Award should win. Here is what the engines actually return.</p>
+
+    <table class="audit-table" aria-label="AI engine visibility audit for Valerie Jaksic Design">
+      <thead>
+        <tr>
+          <th style="width: 38%;">Query</th>
+          <th style="width: 18%;">Engines naming VJD</th>
+          <th>What gets returned instead</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="query">best interior designer Green Bay</td>
+          <td class="verdict">0 / 5</td>
+          <td class="note">Returns directory aggregators (Houzz lists, Yelp), and one or two regional firms with active blogs. The 2025 Quality Business Award is not surfaced.</td>
+        </tr>
+        <tr>
+          <td class="query">luxury interior designer Door County</td>
+          <td class="verdict">0 / 5</td>
+          <td class="note">Returns Door County builders and one Sturgeon Bay design-build firm. No Suamico studios named. Door County service area not associated with VJD.</td>
+        </tr>
+        <tr>
+          <td class="query">kitchen bath designer Green Bay woman-owned</td>
+          <td class="verdict">0 / 5</td>
+          <td class="note">Returns kitchen showroom retailers and one cabinet maker. The woman-owned solo-designer category is not separated from showroom businesses.</td>
+        </tr>
+        <tr>
+          <td class="query">Northeast Wisconsin interior designer</td>
+          <td class="verdict partial">0&ndash;1 / 5</td>
+          <td class="note">Best result: occasionally one engine pulls the Houzz profile through to a citation but does not name VJD in the answer body itself. Industry-depth career is invisible.</td>
+        </tr>
+        <tr>
+          <td class="query">wellbeing-led interior design Wisconsin</td>
+          <td class="verdict">0 / 5</td>
+          <td class="note">Returns out-of-state biophilic-design firms and one Madison wellness consultant. No NE Wisconsin practitioner appears.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="audit-summary">
+      <strong>The verdict.</strong> Across 25 query-engine pairs, Valerie Jaksic Design surfaces in zero to one of them. The structured data the engines look for (Person schema, InteriorDesigner schema, Award schema, LocalBusiness with Suamico coordinates, service-area pages for De Pere and Door County) is not on the current site in a form the crawlers can read. The credentials exist. The structured signal does not.
+    </div>
+  </div>
+</section>
+
+<section class="build">
+  <div class="container">
+    <h2>What we would build to close the gap</h2>
+    <p class="section-lede">Six structural changes. None of them touch the design of the existing site beyond what is needed to embed machine-readable schema and add service-area landing pages. The studio's visual identity stays. The crawlers start finding it.</p>
+
+    <div class="build-grid">
+      <div class="build-card">
+        <h3>Person &amp; InteriorDesigner schema</h3>
+        <p>Embed <code>Person</code> JSON-LD for Valerie Jaksic O'Leary with degree, awards, knowsAbout, and a sameAs array linking Houzz, Instagram, Facebook, LinkedIn. Layer an <code>InteriorDesigner</code> profile on top so engines know the business and the principal are linked.</p>
+      </div>
+      <div class="build-card">
+        <h3>Four Award schema entries</h3>
+        <p>Each Best of Houzz year (2019, 2020, 2021) and the 2025 Quality Business Award gets its own <code>Award</code> entity referencing the issuing organization. Engines treat these as named-entity facts they can quote in an answer.</p>
+      </div>
+      <div class="build-card">
+        <h3>LocalBusiness with Suamico coordinates</h3>
+        <p>Geo-anchored <code>LocalBusiness</code> schema with the Suamico studio address, latitude and longitude, and an <code>areaServed</code> array naming Green Bay, De Pere, Suamico, and Door County. Local-pack proximity signal made explicit.</p>
+      </div>
+      <div class="build-card">
+        <h3>Per-service landing pages</h3>
+        <p>One page each for kitchen design, bath design, whole-home renovation, and new-construction interiors. Each carries its own <code>Service</code> schema, a portfolio of past projects in that service, and the supply-side career credential as the differentiator.</p>
+      </div>
+      <div class="build-card">
+        <h3>FAQPage schema</h3>
+        <p>Twelve to fifteen questions a real Northeast Wisconsin homeowner asks before hiring a designer, each answered in 60 to 90 words and wrapped in <code>FAQPage</code> markup so the AI engines can extract and quote them directly into their answers.</p>
+      </div>
+      <div class="build-card">
+        <h3>Door County service-area capture</h3>
+        <p>A dedicated Door County interior design page with the seasonal-home angle (vacation properties, lake homes, second residences) and an explicit content cluster linking Sturgeon Bay, Egg Harbor, Fish Creek, and Sister Bay. The Door County query lane is currently unowned by any local designer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-now">
+  <div class="container">
+    <h2>Why this matters in 2026</h2>
+    <p class="section-lede">Three forces converged in the last twelve months. The window to capture the Northeast Wisconsin interior-design lane in AI search is open right now and will close.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">Force 1</div>
+        <h3>Houzz traffic has flattened</h3>
+        <p>The aggregator that delivered Best of Houzz badges is no longer the primary research path. Homeowners ask conversational AI first and click directory listings second, if at all. Awards earned on Houzz now need to live on the studio site to be cited.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">Force 2</div>
+        <h3>AI Overviews replaced page 2</h3>
+        <p>Google AI Overviews now sits above the organic results for almost every "best [service] [city]" query. Designers who built schema in 2024 and 2025 are quoted in those overviews. Designers who did not build schema are not.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">Force 3</div>
+        <h3>The 2025 award has a 12-month half-life</h3>
+        <p>A 2025 award cited in 2026 reads as current. The same award cited in 2027 reads as dated. The structured-data embed that turns Quality Business Award 2025 into a machine-readable fact about VJD needs to ship while the year still reads as recent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="faq">
+  <div class="container">
+    <h2>Questions a Northeast Wisconsin designer asks before saying yes</h2>
+    <p class="section-lede">Four answers up front. The rest sit in the full proposal.</p>
+
+    <details>
+      <summary>Do I have to rebuild the existing site?</summary>
+      <p>No. The current valeriejaksicdesign.com stays. The work is structural: add JSON-LD schema blocks to the existing pages, add four new service-area landing pages, and add the FAQ section. Visual design, copy, and brand stay exactly as they are. The goal is to give the AI crawlers a structured layer to read, not to redesign anything a client sees.</p>
+    </details>
+
+    <details>
+      <summary>How long until the AI engines start citing the studio?</summary>
+      <p>The structured-data embeds and the new service pages typically begin getting indexed within three to six weeks. Citations in conversational AI answers tend to follow over the next eight to twelve weeks, as the engines re-crawl, re-rank, and add the new entity relationships. The 2025 Quality Business Award and the three Best of Houzz years should start surfacing as quoted credentials in that window.</p>
+    </details>
+
+    <details>
+      <summary>Will this change how leads contact the studio?</summary>
+      <p>The intake stays exactly the same. Phone, email, and the contact form on the existing site remain the only paths. The change is in volume and qualification. When AI engines start citing the studio as the answer to "best interior designer Green Bay" and "luxury interior designer Door County," the inquiries that land in the inbox arrive with the credentials and the supply-side career already in mind. They self-qualify before they reach Valerie.</p>
+    </details>
+
+    <details>
+      <summary>What is the risk if nothing changes?</summary>
+      <p>The category does not stay empty. Every quarter, another Northeast Wisconsin designer or design-build firm adds schema, builds a Door County page, or stacks an award embed. The first studio to do it owns the lane in AI search for the next three to five years, the way the first restaurant to claim a Google Business Profile in 2012 still ranks above the rest of the block. Waiting twelve months means competing for second place in a lane that should be the studio's by credential.</p>
+    </details>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>Valerie Jaksic Design &middot; Search-Visibility Audit</strong>
+        <span>Prepared for Valerie Jaksic O'Leary, Suamico, Wisconsin</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Awards</a>
+        <a href="#audit">Audit</a>
+        <a href="#contact">FAQ</a>
+      </div>
+    </div>
+    <div class="signoff">
+      Audit and proposal prepared by Andrei Givero, AG1 Consulting. Independent search-visibility work for Northeast Wisconsin owner-operated studios. <br>
+      Full proposal and scope: <a href="https://andrei170.github.io/ag1/#services">https://andrei170.github.io/ag1/#services</a>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://valeriejaksicdesign.com/#valerie",
+      "name": "Valerie Jaksic O'Leary",
+      "givenName": "Valerie",
+      "familyName": "Jaksic O'Leary",
+      "jobTitle": "Founder &amp; Principal Interior Designer",
+      "worksFor": { "@id": "https://valeriejaksicdesign.com/#business" },
+      "alumniOf": "Interior Design Program (degree, 2000)",
+      "knowsAbout": [
+        "Residential interior design",
+        "Kitchen design",
+        "Bath design",
+        "Plumbing fixture specification",
+        "Flooring specification",
+        "Textile and carpet sourcing",
+        "Northeast Wisconsin residential renovation",
+        "Door County vacation home design"
+      ],
+      "award": [
+        "Best of Houzz 2019",
+        "Best of Houzz 2020",
+        "Best of Houzz 2021",
+        "Quality Business Award 2025: Best Interior Designer Green Bay"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/valeriejaksicdesign",
+        "https://www.facebook.com/valeriejaksicdesign",
+        "https://www.linkedin.com/in/valerie-jaksic",
+        "https://www.houzz.com/professionals/interior-designers-and-decorators/valerie-jaksic-design-llc"
+      ]
+    },
+    {
+      "@type": ["LocalBusiness", "InteriorDesigner"],
+      "@id": "https://valeriejaksicdesign.com/#business",
+      "name": "Valerie Jaksic Design LLC",
+      "founder": { "@id": "https://valeriejaksicdesign.com/#valerie" },
+      "foundingDate": "2001",
+      "url": "https://valeriejaksicdesign.com",
+      "description": "Solo woman-owned interior design studio serving Green Bay, De Pere, Suamico, and Door County. Twenty-four years of residential design, with industry-depth from prior careers at First Supply, H.J. Martin and Son, and Mohawk Industries.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suamico",
+        "addressRegion": "WI",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Green Bay, WI" },
+        { "@type": "City", "name": "De Pere, WI" },
+        { "@type": "City", "name": "Suamico, WI" },
+        { "@type": "AdministrativeArea", "name": "Door County, WI" }
+      ],
+      "knowsAbout": [
+        "Kitchen design",
+        "Bath design",
+        "Whole-home renovation",
+        "New construction interiors",
+        "Vacation home design"
+      ],
+      "award": [
+        "Best of Houzz 2019 (Houzz)",
+        "Best of Houzz 2020 (Houzz)",
+        "Best of Houzz 2021 (Houzz)",
+        "Quality Business Award 2025: Best Interior Designer Green Bay"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/valeriejaksicdesign",
+        "https://www.facebook.com/valeriejaksicdesign",
+        "https://www.houzz.com/professionals/interior-designers-and-decorators/valerie-jaksic-design-llc"
+      ]
+    },
+    {
+      "@type": "Award",
+      "name": "Best of Houzz 2019",
+      "awardedBy": { "@type": "Organization", "name": "Houzz" },
+      "dateAwarded": "2019",
+      "recipient": { "@id": "https://valeriejaksicdesign.com/#business" }
+    },
+    {
+      "@type": "Award",
+      "name": "Best of Houzz 2020",
+      "awardedBy": { "@type": "Organization", "name": "Houzz" },
+      "dateAwarded": "2020",
+      "recipient": { "@id": "https://valeriejaksicdesign.com/#business" }
+    },
+    {
+      "@type": "Award",
+      "name": "Best of Houzz 2021",
+      "awardedBy": { "@type": "Organization", "name": "Houzz" },
+      "dateAwarded": "2021",
+      "recipient": { "@id": "https://valeriejaksicdesign.com/#business" }
+    },
+    {
+      "@type": "Award",
+      "name": "Quality Business Award 2025: Best Interior Designer Green Bay",
+      "awardedBy": { "@type": "Organization", "name": "Quality Business Awards" },
+      "dateAwarded": "2025",
+      "recipient": { "@id": "https://valeriejaksicdesign.com/#business" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I have to rebuild the existing site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The current valeriejaksicdesign.com stays as is. The work is structural: add JSON-LD schema blocks, add four service-area landing pages, and add an FAQ section. Visual design, copy, and brand stay the same."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until AI engines start citing the studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Structured-data embeds and new service pages typically begin indexing within three to six weeks. Citations in conversational AI answers follow over the next eight to twelve weeks as engines re-crawl and add the new entity relationships."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this change how leads contact the studio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intake stays the same. Phone, email, and the contact form remain the only paths. The change is in volume and qualification. Inquiries arrive with the credentials and the supply-side career already in mind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the risk if nothing changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The category does not stay empty. The first Northeast Wisconsin studio to add schema, build a Door County page, and stack award embeds owns the AI-search lane for three to five years. Waiting twelve months means competing for second place in a lane that should be the studio's by credential."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
